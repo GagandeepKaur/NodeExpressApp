@@ -1,0 +1,6 @@
+{
+  "name": "NodeExpressApp",
+  "tagline": "Using Passport js for authenticating users and adding data in mongodb.",
+  "body": "# NodeExpressApp\r\n\r\n## To run the application on your own:##\r\n\r\n1. Install Mongodb\r\n\r\n2. Start Mongodb by going to bin folder and type \r\nmongod.exe --dbpath path to data folder in NodeExpressApp\r\n\r\n3. Run node server.js\r\n\r\n4. Run http://localhost:3000/ in your explorer to see the app.\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
