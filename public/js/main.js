@@ -10,7 +10,8 @@ var AppRouter = Backbone.Router.extend({
         "login"             : "login",
         "register"          : "register",
         "welcome"           : "welcome",
-        "logout"            : "home"
+        "logout"            : "home",
+        "loginSocial"       : "loginSocial"
     },
 
     initialize: function () {
@@ -24,6 +25,14 @@ var AppRouter = Backbone.Router.extend({
         }
         $('#content').html(this.homeView.el);
         this.headerView.selectMenuItem('home-menu');
+    },
+
+    loginSocial: function () {
+        if (!this.loginSocialView) {
+            this.loginSocialView = new LoginSocialView();
+        }
+        $('#content').html(this.loginSocialView.el);
+        this.headerView.selectMenuItem('login-social-menu');
     },
 
     welcome: function (id) {
@@ -87,7 +96,7 @@ var AppRouter = Backbone.Router.extend({
 
 });
 
-utils.loadTemplate(['HomeView', 'HeaderView', 'WineView', 'WineListItemView', 'AboutView', 'WelcomeView', 'LoginView', 'RegisterView'], function() {
+utils.loadTemplate(['HomeView', 'HeaderView', 'WineView', 'WineListItemView', 'AboutView', 'WelcomeView', 'LoginView', 'RegisterView', 'LoginSocialView'], function() {
     app = new AppRouter();
     Backbone.history.start();
 });
