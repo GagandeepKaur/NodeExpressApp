@@ -12,7 +12,7 @@ var TwitterStrategy = require('passport-twitter').Strategy;
 var GithubStrategy = require('passport-github2').Strategy;
 var GoogleStrategy = require('passport-google-oauth2').Strategy;
 var InstagramStrategy = require('passport-instagram').Strategy;
-var wine = require('./routes/wines');
+//var wine = require('./routes/wines');
 
 // connect to the database
 mongoose.connect('mongodb://localhost/passport-example');
@@ -34,11 +34,11 @@ app.use(passport.session());
 app.use(app.router);
 });
 
-app.get('/wines', wine.findAll);
+/*app.get('/wines', wine.findAll);
 app.get('/wines/:id', wine.findById);
 app.post('/wines', wine.addWine);
 app.put('/wines/:id', wine.updateWine);
-app.delete('/wines/:id', wine.deleteWine);
+app.delete('/wines/:id', wine.deleteWine);*/
 // serialize and deserialize
 passport.serializeUser(function(user, done) {
   console.log('serializeUser: ' + user._id);
